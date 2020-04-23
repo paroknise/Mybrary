@@ -20,5 +20,13 @@ if (process.env.NODE_ENV !== 'production') {
   db.once('open', () => console.log('Connected to Mongoose'))
   
   app.use('/', indexRouter)
+
+  //DEFAULT
+if(process.env.NODE_ENV === 'production'){
+  const path = require('path');
+  app.get('/*',(req,res)=>{
+      res.sendfile(path.resolve(__dirname, 'build', 'index.ejs'))
+  })
+}
   
   app.listen(process.env.PORT || 3000)
