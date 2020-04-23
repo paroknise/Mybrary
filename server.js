@@ -22,11 +22,11 @@ if (process.env.NODE_ENV !== 'production') {
   app.use('/', indexRouter)
 
   //DEFAULT
-if(process.env.NODE_ENV === 'production'){
-  const path = require('path');
-  app.get('/*',(req,res)=>{
-      res.sendfile(path.resolve(__dirname, 'build', 'index.ejs'))
-  })
-}
+// if(process.env.NODE_ENV === 'production'){
+//   const path = require('path');
+//   app.get('/*',(req,res)=>{
+//       res.sendfile(path.resolve(__dirname, 'build', 'index.ejs'))
+//   })
+// }
   
   app.listen(process.env.PORT || 3000)
