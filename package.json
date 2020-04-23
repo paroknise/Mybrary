@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
-    "devStart": "nodemon server.js",
-  }
+    "devStart": "nodemon server.js"
+  },
   "engines": {
     "node":"10.16.3"
   },
